@@ -12,6 +12,35 @@ boxPlot3D(xx)
 
 
 
-<p>aToD will create a graphical user interface. Initially, the interface gives you the option to select a type of signal (<i>sine, triangular or square</i>)</p> or to change the frequency. When you select either of these two options, a signal will be drawn.
+<p>aToD will create a graphical user interface. Initially, the interface gives you the option to select a type of signal (<i>sine, triangular or square</i>) or to change the frequency. When you select either of these two options, a signal will be drawn.</p>
 
 ![Screenshot1](Figures/aToD2.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD3.png)
+
+
+<p>
+</p>
+![Screenshot1](Figures/aToD4.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD5.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD6.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD7.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD8.png)
+
+<p>
+</p>
+![Screenshot1](Figures/aToD9.png)
