@@ -31,12 +31,12 @@ boxPlot3D(xx)
 
 
 
-<p>When you select to sample the signal, or change the sampling frequency, the signal will be sampled and you will be presented with new options related to quantisation.
+<p>When you select to sample the signal, or change the sampling frequency, the signal will be sampled and you will be presented with new options related to quantisation. A proper combination of sampling frequency, and quantisation levels or number of bits is crucial in the analogue to digital conversion process.
 </p>
 
 ![Screenshot1](Figures/aToD5.png)
 
-<p>
+<p>Once you sample and quantise your signal, the signal will be presented in dotted lines with the actual samples in red stars with the quantised samples in black circles. This illustrates the quantisation error that is due to the number of levels. Change the number of bits and compare.
 </p>
 
 ![Screenshot1](Figures/aToD6.png)
