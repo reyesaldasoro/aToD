@@ -61,7 +61,7 @@ boxPlot3D(xx)
 
 ![Screenshot1](Figures/aToD10.png)
 
-<p>
+<p>A final experiment is to sample below the critical sampling frequency, also known as Nyquist rate. See what happens with the signal as you convert to digital and back!
 </p>
 
 ![Screenshot1](Figures/aToD11.png)
