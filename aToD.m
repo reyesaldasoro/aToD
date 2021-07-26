@@ -185,7 +185,7 @@ elseif  strcmp(action,'cuanti')
             aux=aux+incremento;
             %niveles de comparación
             plot(t,cuant(i,:),'g:'); 
-            niv_bits=dec2bin(i-1);
+            niv_bits=dec2bin(i-1,numbits);
             %bits correspondientes al nivel
             if niveles<17
                 text(6.3,cuant(i,1),niv_bits);
