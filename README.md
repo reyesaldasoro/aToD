@@ -16,22 +16,22 @@ boxPlot3D(xx)
 
 ![Screenshot1](Figures/aToD2.png)
 
+<p>You will have now two more options, related with the sampling of the signal. If you select these, the signal will be sampled.
+</p>
 
 <p>You can change the type of signal or its frequency at any time.</p>
+
+
 
 ![Screenshot1](Figures/aToD3.png)
 
 ![Screenshot1](Figures/aToD4.png)
 
-<p>You will have now two more options, related with the sampling of the signal. If you select these, the signal will be sampled.
-</p>
-
-<p>
-</p>
+<p></p>
 
 
 
-<p>
+<p>When you select to sample the signal, or change the sampling frequency, the signal will be sampled and you will be presented with new options related to quantisation.
 </p>
 
 ![Screenshot1](Figures/aToD5.png)
