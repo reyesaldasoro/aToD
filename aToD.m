@@ -255,7 +255,7 @@ elseif  strcmp(action,'anadig')
     maxbits=length(y_bin_tx);
     if maxbits>80
         maxbits=80;
-    end;
+    end
     xlabel(y_bin_tx(1:maxbits-2))
     hold off
     
