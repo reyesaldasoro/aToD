@@ -8,8 +8,8 @@ A simple and intuitive graphical user interface to explore and analyse the proce
 <pre class="codeinput"> aToD
 boxPlot3D(xx)
 </pre>
-![Screenshot1](Figures/aToD1.png) 
+![Screenshot1](Figures/aToD1.png)
 
 
 
-<p>boxPlot3D(x) creates a three dimensional box plot of the data in x. If x is 3D a matrix, boxPlot3D creates one box for each column. Example, create a 3D matrix with normal distributions with different means:</p>
+<p>aToD will create a graphical user interface. Initially, the interface gives you the option to select a type of signal ({\it sine, triangular or square})</p>
