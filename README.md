@@ -41,17 +41,17 @@ boxPlot3D(xx)
 
 ![Screenshot1](Figures/aToD6.png)
 
-<p>
+<p> The digital signal is illustrated with a No-Return-to-zero code (1 as a high level and 0 as a low level), and only some bits are written down under the digital signal.
 </p>
 
 ![Screenshot1](Figures/aToD7.png)
 
-<p>
+<p>Finally, you can convert back from digital to analogue.
 </p>
 
 ![Screenshot1](Figures/aToD8.png)
 
-<p>
+<p>Explore the differences in A/D and D/A conversions with different sampling and quantising values
 </p>
 
 ![Screenshot1](Figures/aToD9.png)
