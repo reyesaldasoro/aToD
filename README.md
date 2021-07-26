@@ -12,4 +12,4 @@ boxPlot3D(xx)
 
 
 
-<p>aToD will create a graphical user interface. Initially, the interface gives you the option to select a type of signal ({\it sine, triangular or square})</p>
+<p>aToD will create a graphical user interface. Initially, the interface gives you the option to select a type of signal (<i> sine, triangular or square</i>)</p>
