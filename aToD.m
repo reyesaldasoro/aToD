@@ -13,6 +13,7 @@ function aToD(action)
 %clear;
 fig=gcf;
 %obj=gco;
+
 %clf
 global  popfunc slifrec pbend valorfrec slifrec slifrmu valorfrmu pmuest
 global   slibits valorbits  valorfrmu pcuanti panadi y_t t ys_t ts frec
