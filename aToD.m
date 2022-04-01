@@ -12,6 +12,8 @@ function aToD(action)
 %------------------------------------------------------
 %clear;
 fig=gcf;
+
+
 %obj=gco;
 
 
@@ -30,7 +32,7 @@ if strcmp(action,'initialize')
     set(figure(1),'Name','Analogue to Digital Conversion');
     set(figure(1),'NumberTitle','off');
     %----------------------------------------------
-    % Solamente se genera el tipo de funci髇 y su frecuencia
+    % Solamente se genera el tipo de funci贸n y su frecuencia
     %----------------------------------------------
     %tipo de funcion
     nomfunc=uicontrol(fig,'Style','text','position',[5 50 115 35],...
@@ -53,7 +55,7 @@ if strcmp(action,'initialize')
     
 elseif  strcmp(action,'signal')
     %--------------------------------------
-    % Genera la se馻l y la grafica
+    % Genera la se帽al y la grafica
     % y da las opciones de muestreo
     %--------------------------------------
     
@@ -67,19 +69,19 @@ elseif  strcmp(action,'signal')
     valorfrmu=uicontrol(fig,'Style','text','position',[375 50 30 35],...
         'string',num2str(get(slifrmu,'Value')));
     
-    %el bot髇 que llama a muestrear
+    %el bot贸n que llama a muestrear
     pmuest= uicontrol(fig,'Style','push','position',[5 90 110 35],...
         'String','Sample','CallBack','aToD(''sampl'')');
     
     %--------------------------------------
-    %toma valores de la frecuencia de la se馻l y vuelve a graficarlos
+    %toma valores de la frecuencia de la se帽al y vuelve a graficarlos
     nomfrec=uicontrol(fig,'Style','text','position',[125 50 100 35],...
         'string','signal frequency');
     valorfrec=uicontrol(fig,'Style','text','position',[225 50 30 35],...
         'string',(num2str(round(get(slifrec,'Value')))));
     
     %-----------------------------------------
-    % genera la se馻l
+    % genera la se帽al
     frec=round(get(slifrec,'value'));        %frecuencia de la senal
     t=0:0.005:2*pi-0.01;                     %eje del tiempo
     signalnum=get(popfunc,'value');          %tipo de senal
@@ -110,7 +112,7 @@ elseif  strcmp(action,'sampl')
     % se abre la opcion de cuantizar
     
     %--------------------------------------
-    %slider de cuantizaci髇
+    %slider de cuantizaci贸n
     % slibits= uicontrol(gcf,'Style','slider','position',[415 10 130 35],...
     %     'Min',1,'Max',15,'Value',3,'CallBack',['set(valorbits,''String'',',...
     %        'num2str(round(get(slibits,''Val'')))),aToD(''cuanti'')']);
@@ -132,7 +134,7 @@ elseif  strcmp(action,'sampl')
     % Toma valores de bits y muestras de las reglas
     frec=round(get(slifrec,'value'));         %frecuencia de la senal
     frmu=round(get(slifrmu,'value'));         %frecuencia de muestreo
-    %genera el eje de muestreo y la nueva se馻l muestreada
+    %genera el eje de muestreo y la nueva se帽al muestreada
     ts=0:2*pi/frmu:2*pi-0.01;                 %muestras en el eje x
     pm=floor(ts*length(t)/2/pi+1);                 %posiciones de muestreo
     ys_t=y_t(pm);                             %senal muestreada
@@ -149,7 +151,7 @@ elseif  strcmp(action,'sampl')
     axis([-0.1 6.3 -1.1 1.1]);
     
     %-----------------------------------------
-    %botones de muestreo y cuantizaci髇
+    %botones de muestreo y cuantizaci贸n
     pcuanti = uicontrol(fig,'Style','push','position',[125 90 130 35],...
         'String','Quantise','CallBack','aToD(''cuanti'')');
     
@@ -158,11 +160,11 @@ elseif  strcmp(action,'cuanti')
         'string',num2str(round(get(slibits,'Value'))));
     
     %--------------------------------------
-    %programa de cuantizaci髇, se abrela opci髇
+    %programa de cuantizaci贸n, se abrela opci贸n
     % de la conversion A/D
     
     %--------------------------------------
-    %bot髇 de conversion A/D
+    %bot贸n de conversion A/D
     panadi= uicontrol(fig,'Style','push','position',[275 90 130 35],...
         'String','A/D','CallBack','aToD(''anadig'')');
     %--------------------------------------
@@ -171,11 +173,11 @@ elseif  strcmp(action,'cuanti')
     niveles=2^numbits;                        %numero de niveles de cuantizacion
     
     %--------------------------------------
-    % realiza la cuantizaci髇 de la se馻l
+    % realiza la cuantizaci贸n de la se帽al
     figure(1)
     subplot(2,1,1)
     %--------------------------------------
-    %grafica la se馻l original y las muestras
+    %grafica la se帽al original y las muestras
     plot(t,y_t,'b:',ts,ys_t,'r*')
     title('quantised signal');
     hold on
@@ -187,7 +189,7 @@ elseif  strcmp(action,'cuanti')
         for i=1:niveles
             cuant(i,:)=linea*aux;
             aux=aux+incremento;
-            %niveles de comparaci髇
+            %niveles de comparaci贸n
             plot(t,cuant(i,:),'g:'); 
             niv_bits=dec2bin(i-1,numbits);
             %bits correspondientes al nivel
@@ -208,10 +210,10 @@ elseif  strcmp(action,'cuanti')
     
 elseif  strcmp(action,'anadig')
     
-    % Conversi髇 anal骻ica a digital
-    %abre la opci髇 de conversi髇 D/A
+    % Conversi贸n anal贸gica a digital
+    %abre la opci贸n de conversi贸n D/A
     %---------------------------------
-    %bot髇 D/A
+    %bot贸n D/A
     pdigan= uicontrol(fig,'Style','push','position',[415 90 130 35],...
         'String','D/A','CallBack','aToD(''digan'')');
     
@@ -238,7 +240,7 @@ elseif  strcmp(action,'anadig')
         y_binmat=[y_binmat;dat];
     end
     %---------------------------------
-    %comienza la gr醘ica con la se馻l digital y
+    %comienza la gr谩fica con la se帽al digital y
     %los bits que corresponden a ella
     subplot(2,1,1)
     stairs((0:length(y_bin)-1),y_bin);
@@ -266,10 +268,10 @@ elseif  strcmp(action,'anadig')
 elseif  strcmp(action,'digan')
     
     
-    % reconversion a anal骻ico usando matriz auxiliar y_binmat y otra matriz dos_ala_n
+    % reconversion a anal贸gico usando matriz auxiliar y_binmat y otra matriz dos_ala_n
     
     %----------------------------------
-    %recupera la se馻l original con la multiplicaci髇 de los valores de los niveles
+    %recupera la se帽al original con la multiplicaci贸n de los valores de los niveles
     %por y_binmat que es una matriz con los bits como palabras de los bits
     niv2=(numbits-1:-1:0);
     dos_ala_n=(2.^niv2)';
@@ -279,12 +281,12 @@ elseif  strcmp(action,'digan')
     %resolucion deseada
     resol=8192;   
     %----------------------------------
-    %transformada de la se馻l original
+    %transformada de la se帽al original
     y_f=(abs(fft(y_t,resol)));
     aux1=length(y_t);
     frec_y_f=(aux1/resol:aux1/resol:aux1);
     %----------------------------------
-    %transformada de la se馻l original
+    %transformada de la se帽al original
     ys_f=(abs(fft(ys_t,resol)));
     aux2=length(ys_t);
     frec_ys_f=(aux2/resol:aux2/resol:aux2);
